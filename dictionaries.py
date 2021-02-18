@@ -87,13 +87,8 @@ def find_unique_common_items(items1, items2):
         >>> sorted(find_unique_common_items(["2", "1", 2], [2, 1]))
         [2]
     """
-    unique_common_items = set()
-    set_of_items1 = set(items1)
-    set_of_items2 = set(items2)
 
-    unique_common_items = set_of_items1 & set_of_items2
-
-    return unique_common_items
+    return set(items1) & set(items2)
 
 
 def get_sum_zero_pairs(numbers):
@@ -123,7 +118,7 @@ def get_sum_zero_pairs(numbers):
         [[-1, 1], [0, 0]]
     """
 
-    inverse_num = None
+    #inverse_num = None
     final_set = set()
     final_list = []
 
