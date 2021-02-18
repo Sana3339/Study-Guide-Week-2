@@ -54,4 +54,19 @@ class Exam(object):
             if question.ask_and_evaluate():
                 correct_answer_tally += 1
 
-        print(float(correct_answer_tally/num_of_questions_asked)*100)
+        score = float(correct_answer_tally/num_of_questions_asked)*100
+        print(score)
+        return score
+
+    class StudentExam(object):
+        """Stores student, exam and exam score."""
+
+        def __init__(self, student, exam, score):
+            self.student = student
+            self.exam = exam
+            self.score = None
+
+        def take_test(self):
+        
+            self.score = self.exam.administer
+            print("Student's score is: ", self.score)
